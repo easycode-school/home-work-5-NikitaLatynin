@@ -1,0 +1,9 @@
+<p>
+  The task 
+</p>
+<form (ngSubmit)="onSubmitHandler(formTodo)" #formTodo="ngForm" novalidate>
+  <input type="text" [(ngModel)]="todo.title" name="title" #todoTitle="ngModel" required>
+  <input type="text" [(ngModel)]="todo.text" name="text" #todoText="ngModel" required>
+  <button [disabled]="formTodo.invalid" >Add todo</button>
+</form>
+
